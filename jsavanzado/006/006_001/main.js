@@ -275,10 +275,13 @@ class AlmacenarPersonajes {
 
     pintar() {
         document.getElementById("header").innerHTML = "";
-        this.pintarInput("nombre", "input");
-        this.pintarInput("weapon", "input");
-        this.pintarInput("occupation", "input");
-        this.pintarInput("debt", "input");
+        this.pintarTag("nombre", "input");
+
+        this.pintarTag("weapon", "input");
+
+        this.pintarTag("occupation", "input");
+
+        this.pintarTag("debt", "input");
 
         var botonAtenderOrdenes = document.createElement('button');
         botonAtenderOrdenes.id = 'botonTomarNota';
@@ -298,13 +301,16 @@ class AlmacenarPersonajes {
         document.getElementById("btoBorrar").innerHTML = botonBorrar;
     }
 
-    pintarInput(nombre, tipo) {
-        var anonimoInput = document.createElement(tipo);
-        anonimoInput.id = nombre;
-        anonimoInput.name = nombre;
-        anonimoInput.type = tipo;
-        anonimoInput.textContent = nombre;
-        header.appendChild(anonimoInput);
+<label for="exampleInputEmail1">Email address</label>
+
+    pintarTag(nombre, tipo) {
+        var anonimoTag = document.createElement(tipo);
+        anonimoTag.id = nombre;
+        anonimoTag.name = nombre;
+        anonimoTag.type = tipo;
+        anonimoTag.textContent = nombre;
+
+        header.appendChild(anonimoTag);
     }
     iniciarIntervalo() {
         this.ejecutarCiclo();
